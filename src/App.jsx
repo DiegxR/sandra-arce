@@ -387,7 +387,7 @@ function App() {
                 <input type="text" id="documento" name="documento" placeholder="ID" required />
               </div>
             </div>
-            <div className="form-row">
+            <div className="form-row form-row-fix">
               <div className="form-group">
                 <label htmlFor="telefono">Phone / WhatsApp</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="300 123 4567" required />
