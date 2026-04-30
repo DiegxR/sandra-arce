@@ -940,8 +940,18 @@ header, .header {
   padding: 80px 20px;
   color: #1e2a24;
 }
-
+.appointment-form input{
+  color: black; 
+}
+option{
+  color: black;
+}
+select{
+  color: black;
+}
 .appointment-form {
+  
+  color: black;
   background: #f9f9f7;
   border-radius: 16px;
   box-shadow: 0 6px 32px rgba(0, 0, 0, 0.05);
