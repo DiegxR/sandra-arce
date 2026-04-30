@@ -54,7 +54,6 @@ header {
 .nav-link { /*tamaño del logo*/ 
   position: relative;
   font-size: 18px ;
-
 }
 
 .nav-link:after {
