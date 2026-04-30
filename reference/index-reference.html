@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicina Estética | Belleza de Vanguardia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="tail-container bg-[#f5f0e1] text-[#111827]">
+
+  <!-- =================SECCION HEADER ==================-->
+  <header class="bg-[#f5f0e1] border-b border-[#d4af37]/20 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+
+      <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="logo flex-shrink-0">
+        <img src="img/logotipo/Logo.png" alt="Lumina Estética" class="drop-shadow-md">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-x-10 text-sm font-medium">
+
+        <a href="#tratamientos" class="nav-link text-[#111827] hover:text-[#166534] transition-colors">Treatments</a>
+        <a href="#nosotros" class="nav-link text-[#111827] hover:text-[#166534] transition-colors">About Us</a>
+        <a href="#resultados" class="nav-link text-[#111827] hover:text-[#166534] transition-colors">Results</a>
+        <a href="#contacto" class="nav-link text-[#111827] hover:text-[#166534] transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-x-4">
+        <a href="#reservar-cita"
+          class="px-6 py-3 bg-[#d4af37] hover:bg-[#c19a2e] text-[#111827] font-semibold rounded-full transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-x-2">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+
+      <!--Boton responsivo de Hamburgesa-->
+      <button id="hamburger" class="md:hidden text-3xl text-[#166534]">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-[#f5f0e1] border-t border-[#d4af37]/20 py-6">
+      <div class="flex flex-col items-center gap-y-6 text-lg font-medium">
+        <a href="#hero" onclick="closeMobileMenu()" class="text-[#111827] hover:text-[#166534]">start</a>
+        <a href="#tratamientos" onclick="closeMobileMenu()" class="text-[#111827] hover:text-[#166534]">Treatments</a>
+        <a href="#nosotros" onclick="closeMobileMenu()" class="text-[#111827] hover:text-[#166534]">About Us</a>
+        <a href="#resultados" onclick="closeMobileMenu()" class="text-[#111827] hover:text-[#166534]">Results</a>
+        <a href="#contacto" onclick="closeMobileMenu()" class="text-[#111827] hover:text-[#166534]">Contact</a>
+
+        <a href="#agendar-cita" onclick="closeMobileMenu()"
+          class="mt-4 px-10 py-4 bg-[#d4af37] text-[#111827] font-semibold rounded-full w-4/5 text-center">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+  <!--===================== SECCION HERO =============================-->
+
+  <section id="hero" class="hero-bg h-screen flex items-center relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
+      <div class="max-w-3xl mx-auto">
+        <div
+          class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full mb-8 border border-white/30">
+          <div class="w-3 h-3 bg-[#d4af37] rounded-full animate-pulse"></div>
+          <span class="text-sm tracking-widest uppercase font-medium">Luxury aesthetics in Milwaukee.</span>
+        </div>
+
+        <h1 class="text-6xl md:text-7xl font-bold logo-text leading-none tracking-tighter mb-4">
+          YOUR BEAUTY,<br>
+          <span class="text-[#d4af37]">OUR MASTERPIECE</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-white/90 max-w-lg mx-auto mb-12">
+          Advanced aesthetic treatments with state-of-the-art technology and natural results.
+        </p>
+
+        <a href="#reservar-cita"
+          class="group relative px-12 py-6 bg-[#d4af37] hover:bg-white text-[#111827] font-semibold text-lg rounded-2xl overflow-hidden transition-all duration-500 shadow-2xl hover:shadow-[#d4af37]/50 flex items-center gap-x-4 mx-auto">
+          <span class="relative z-10 flex items-center gap-x-3">
+            Book Appointment
+            <i class="fas fa-arrow-right group-active:rotate-45 transition-transform"></i>
+          </span>
+        </a>
+
+        <div class="mt-16 flex justify-center gap-x-12 text-sm">
+          <div class="text-center">
+            <div class="text-[#d4af37] text-3xl font-bold">500+</div>
+            <div class="text-white/70">Happy clients</div>
+          </div>
+          <div class="text-center">
+            <div class="text-[#d4af37] text-3xl font-bold">98%</div>
+            <div class="text-white/70">Satisfaction</div>
+          </div>
+          <div class="text-center">
+            <div class="text-[#d4af37] text-3xl font-bold">+10</div>
+            <div class="text-white/70">Years of experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-2 text-white/70">
+      <span class="text-xs tracking-widest">DISPLACE</span>
+      <div class="w-[1px] h-12 bg-gradient-to-b from-transparent via-white/50 to-transparent"></div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent">
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!--================Seccion Tratientos-Rostro====================-->
+
+  <section class="tratamientos-section" id="tratamientos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Face-Treatments</h2>
+        <p>Natural results, advanced techniques and personalized attention.</p>
+      </div>
+
+      <div class="tratamientos-grid">
+
+        <!-- Tarjeta 1 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/Neuromodulators 1.jpeg" alt="Neromodulators">
+          </div>
+          <div class="card-content">
+            <h3>Neuromodulators</h3>
+            <p>Goodbye wrinkles: fast, safe treatment with no recovery time.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/Dermal Fillers 2.jpeg" alt="Dermal Fillers">
+          </div>
+          <div class="card-content">
+            <h3>Dermal Fillers</h3>
+            <p>Restore lost volume and redefine your features with instantly visible results.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/IPL photofacial-3.jpg" alt="IPL Photofacial">
+          </div>
+          <div class="card-content">
+            <h3>IPL Photofacial</h3>
+            <p>It removes blemishes, redness, and open pores for even, radiant skin like a real-life filter.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/Fax pro laser rejuvenation 4.jpg" alt="Fax pro Laser Rejuvenation">
+          </div>
+          <div class="card-content">
+            <h3>Fax pro Laser Rejuvenation</h3>
+            <p>Renew your skin from the inside: Smooth scars, pores, and fine lines with high-precision laser
+              technology.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/PRP facual tratamients 5.jpg" alt="PRP facial treatment">
+          </div>
+          <div class="card-content">
+            <h3>PRP facial treatment</h3>
+            <p>100% Natural Rejuvenation: Use the healing power of your own blood to regenerate and bring your skin to
+              life.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/ACNE TRATAMIENTO 6.png" alt="Acne Treatment">
+          </div>
+          <div class="card-content">
+            <h3>Acne Treatment</h3>
+            <p>Advanced comprehensive treatment: reduces inflammation, regulates oil and deeply cleanses your pores from
+              the first session.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 7 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/PDO Treats 7.webp" alt="PDO Threads">
+          </div>
+          <div class="card-content">
+            <h3>PDO Threads</h3>
+            <p>Facelift without surgery: redefines the facial contour and tightens the skin immediately and naturally.
+            </p>
+
+          </div>
+        </div>
+
+
+        <!-- Tarjeta 8 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/Chemical-Peel 8.jpg" alt="Chemical-Peel">
+          </div>
+          <div class="card-content">
+            <h3>Chemical-Peel</h3>
+            <p>Reveals new skin: deeply exfoliates to remove dead cells, blemishes and clogged pores in one session.</p>
+
+          </div>
+        </div>
+
+
+
+        <!-- Tarjeta 9 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-image">
+            <img src="img/Procedimientos-face/Eyelash Extensions 10.jpg" alt="Eyelash Extensions">
+          </div>
+          <div class="card-content">
+            <h3>Eyelash Extensions</h3>
+            <p>Instantly enhance your look: long, voluminous lashes perfectly designed for your eye type.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--================Seccion Tratientos- Cuerpo====================-->
+
+  <section class="tratamientos-section" id="tratamientos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Body-Treatments</h2>
+        <p>Natural results, advanced techniques and personalized attention</p>
+      </div>
+
+      <div class="tratamientos-grid">
+
+        <!-- Tarjeta 1 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/Semaglutide-1.webp" alt="Semaglutide">
+          </div>
+          <div class="card-content">
+            <h3>Semaglutide</h3>
+            <p>Achieve your ideal weight safely and sustainably with leading advanced weight loss medical treatment.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/Spider_veins removal 2.jpg" alt="Sapider Vail Removal">
+          </div>
+          <div class="card-content">
+            <h3>Sapider Vail Removal</h3>
+            <p>Regain confidence in your legs: remove spider veins quickly, safely and without surgery.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/Laser Hair Removal 3.jpg" alt="Laser Hair Removal">
+          </div>
+          <div class="card-content">
+            <h3>Laser Hair Removal</h3>
+            <p>Free yourself from daily hair removal: enjoy soft, hair-free skin permanently and safely.</p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/Hair Restauration 4.jpg" alt="Hair Restoration">
+          </div>
+          <div class="card-content">
+            <h3>Hair Restoration</h3>
+            <p>Regain your hair and your confidence with cutting-edge technology for natural and long-lasting density.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/Tumescent-Liposuction- 5.webp" alt="Tumescent Liposuction">
+          </div>
+          <div class="card-content">
+            <h3>Tumescent Liposuction</h3>
+            <p>Sculpt your figure with maximum precision: remove localized fat deposits safely and with faster recovery.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/Ijection for paint - 6.jpg"
+              alt="Joint injections for pain whith steroids or PRP">
+          </div>
+          <div class="card-content">
+            <h3>Joint injections for pain whith steroids or PRP</h3>
+            <p>Regain your freedom of movement: Relieve joint pain and reduce inflammation with advanced and
+              regenerative medicine.</p>
+
+          </div>
+        </div>
+
+
+        <!-- Tarjeta 6 -->
+        <div class="tratamiento-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-image">
+            <img src="img/Procedimientos- Cuerpo/IV therapy 7.jpg" alt="IV Therapy">
+          </div>
+          <div class="card-content">
+            <h3>IV Therapy</h3>
+            <p>Recharge your body instantly: maximum absorption of vitamins and minerals to boost your energy, immunity
+              and performance.
+            <p>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <!--=================Seccion Conoce a la doctora Sandra Arce=====================-->
+
+
+  <section class="doctora-section" id="nosotros">
+    <div class="container">
+      <div class="doctora-content" data-aos="fade-up">
+
+        <!-- Texto a la izquierda -->
+        <div class="doctora-text">
+          <div class="section-header">
+            <span class="pretitle">Experience And Passion</span>
+            <h2>Meet The <span class="highlight">Dr. Sandra Arce</span></h2>
+          </div>
+
+          <p class="intro">
+            Aesthetic doctor with more than +10 years of experience dedicated to enhancing the natural beauty of each
+            patient through advanced and personalized techniques.
+          </p>
+
+          <p>
+            My commitment is to offer harmonious, safe and lasting results, always prioritizing the health, naturalness
+            and satisfaction of those who trust me. Specialized in non-surgical facial rejuvenation, advanced management
+            of hyaluronic acid, botulinum toxin, tensor threads, biostimulators and cutting-edge technologies.
+          </p>
+
+          <ul class="highlights">
+            <li><strong>Constant updates </strong> on the latest facial and body rejuvenation techniques and technologies.</li>
+            <li>Member of the <strong>Colombian Society of Aesthetic Medicine.</strong></li>
+            <li>Certified in leading brands of neuromodulators and fillers.</li>
+            <li>360° Approach: Face, neck, body and overall well-being</li>
+          </ul>
+
+          <a href="#contacto" class="btn-primary">Schedule my personalized evaluation</a>
+        </div>
+
+        <!-- Imagen a la derecha -->
+        <div class="doctora-image" data-aos="fade-left" data-aos-delay="200">
+          <div class="image-wrapper">
+            <img src="img/galeria/Galeria 1.png" alt="Dra. Sandra Arce - Médica Estética">
+            <div class="image-overlay"></div>
+          </div>
+
+          <div class="badges">
+            <span class="badge">+10 years of experience</span>
+            <span class="badge">Natural results</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!--================Seccion Resultaods, "Aqui puedes poner fotos reales de resultados."" ===========================-->
+
+
+
+
+
+  <section id="resultados" class="content-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Guaranteed results.</h2>
+      <p class="gallery-intro animate-on-scroll">
+        Elegance and precision. Discover our best results and experience the best with Dr. Sandra Arce.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item animate-on-scroll"><img src="/img/Doctora AI/1.jpeg" alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/Facial 1.webp" alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/Facial 2.jpg"
+            alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img src="/img/Doctora AI/2.png" alt="galery-image"></div>
+
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/Facial 3.jpg"
+            alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img src="/img/galeria/Galeria 2.jpeg" alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img src="/img/Doctora AI/3.jpeg" alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/Facial 4.jpg"
+            alt="galery-image"></div>
+
+
+
+
+
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/facial 5.webp"
+            alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/facial 6.jpg"
+            alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/Facial 7.webp"
+            alt="galery-image"></div>
+        <div class="gallery-item animate-on-scroll"><img
+            src="/img/Resultados/Facial 8.jpg" alt="Botox">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--=================Seccion Porque Elegirnos======================-->
+
+
+  <section class="porque-section" id="porque-elegirnos">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="pretitle">Razones que nos distinguen</span>
+        <h2>¿Why choose us?</h2>
+        <p>Absolute commitment to excellence, naturalness and a high-level personalized experience.</p>
+      </div>
+
+      <div class="razones-slider" data-aos="fade-up" data-aos-delay="100">
+        <!-- Tarjeta 1 -->
+        <div class="razon-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Natural Results</h3>
+          <p>We enhance your unique beauty while preserving harmony and natural expression, without artificial results.
+          </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="razon-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-laptop-medical"></i>
+          </div>
+          <h3>Advanced Technology</h3>
+          <p>Premium equipment and products with protocols updated according to the most demanding international
+            standards.</p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="razon-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h3>Personalized attention</h3>
+          <p>Detailed evaluation and plan 100% adapted to your skin, age, goals and lifestyle.</p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="razon-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Maximum Security</h3>
+          <p>Strict medical protocols, rigorous sterilization and priority post-treatment follow-up.</p>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="razon-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>+10 Years of Experience</h3>
+          <p>International continuous training and thousands of procedures with consistent and reliable results.</p>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="razon-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-smile-beam"></i>
+          </div>
+          <h3>Trust and Satisfaction</h3>
+          <p>Patients who come back and recommend for honesty, genuine care, and total transparency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!--MISION Y VISION -->
+
+
+  <section class="mision-vision-section">
+    <div class="container">
+      <h2 class="section-title">Our Mission & Vision</h2>
+
+      <div class="content-wrapper">
+        <!-- Texto a la izquierda -->
+        <div class="texts-wrapper">
+          <div class="mission-vision-grid">
+            <div class="card">
+              <h3 class="card-title">Missión</h3>
+              <p class="card-text">
+                My mission as a medical esthetician is to enhance the natural beauty of each person, enhancing their
+                unique traits and helping them to look and feel better about themselves at every stage of life. I am
+                committed to offering personalized, safe and minimally invasive treatments, always based on medical
+                science, professional ethics and active listening to the needs and expectations of my patients. I seek
+                to achieve harmonious, natural and long-lasting results, promoting not only an aesthetic improvement,
+                but also comprehensive well-being, confidence and quality of life, preventing premature aging and taking
+                care of the health of the skin and body.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Visión</h3>
+              <p class="card-text">
+                To be recognized as a national benchmark (or in my region) in advanced and personalized aesthetic
+                medicine, leading with innovation, ethics and natural results that positively transform lives.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto del doctor -->
+        <div class="doctor-photo">
+          <img src="img/galeria/Galeria 1.png" alt="Dr. Duvan Monar - Odontólogo especializado" class="doctor-img">
+          <p class="doctor-name">Dr. Sandra Arce.</p>
+          <p class="doctor-title">Specialist in Aesthetic Medicine. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!--======================SECCION PERSONAL=======================-->
+
+
+  <!-- SECCIÓN DE PERSONAL (Son Dos Targetas de presentacion)-->
+
+
+  <section class="team-section" id="equipo">
+    <div class="container">
+      <h2 class="section-title">Our Staff</h2>
+      <p class="section-subtitle">A professional passionate about your beauty.</p>
+
+      <div class="team-grid">
+
+
+
+        <!-- Tarjeta 2 -->
+        <div class="team-card">
+          <div class="card-front">
+            <div class="photo-container">
+              <img src="img/galeria/Galeria 1.png" alt="Dr. Carlos Andrés Ramírez" class="profile-photo">
+            </div>
+            <h3>Dr. Sandra Arce.</h3>
+            <p class="cargo">Specialist in Aesthetic Medicine.</p>
+            <p class="especialidad">• Responsible for the diagnosis, planning and execution of facial harmonization,
+              rejuvenation and aesthetic medicine treatments.</p>
+
+            <div class="social-icons">
+              <a href="https://www.facebook.com/share/1H31gRKKzv/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/dr._sandraarce/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <!--<a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--======================RESERVAR CITA=====================-->
+
+  <section class="appointment-section" id="reservar-cita">
+    <div class="container">
+      <h2 class="section-title">Book your appointment</h2>
+      <p class="section-subtitle">Schedule your personalized consultation with the doctor</p>
+
+      <form id="appointment-form" class="appointment-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Full Name</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="documento">Document</label>
+            <input type="text" id="documento" name="documento" placeholder="ID" required>
+          </div>
+        </div>
+
+        <div class=""> <!-- Se Elimina La clase Form-group para acomodar el responsive-->
+          <div class="form-group">
+            <label for="telefono">Phone / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="300 123 4567" required>
+          </div>
+
+          <div class="form-group">
+            <label for="procedimiento">Procedure of interest.</label>
+            <select id="procedimiento" name="procedimiento" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Neuromodulators">Neuromodulators</option>
+              <option value="Dermall Fillers">Dermal Fillers</option>
+              <option value="IPL Photofacial">IPL Photofacial</option>
+              <option value="Fax Pro Laser Rejuvenation">Fax Pro Laser Rejuvenation</option>
+              <option value="PRP Facial Treatment">PRP Facial Treatment</option>
+              <option value="PDO Threats">PDO Threats</option>
+              <option value="Chemical Pel">Chemical Pel</option>
+              <option value="Eyelash Extensions">Eyelash Extensions</option>
+              <option value="Semaglutide">Semaglutide</option>
+              <option value="Spider Vein Removal">Spider Vein Removal</option>
+              <option value="Laser Hair Removal">Laser Hair Removal</option>
+              <option value="Hair Restoration">Hair Restoration</option>
+              <option value="Tumescent Liposuction">Tumescent Liposuction</option>
+              <option value="Joint injections for pain whith steroids or PRP">Joint injections for pain whith steroids
+                or PRP</option>
+              <option value="IV Therapy">IV Therapy</option>
+              <option value="Otro">Otro</option>
+
+
+
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Preferred date</label>
+            <input type="date" id="fecha" name="Date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="hora">Approximate time</label>
+            <select id="hora" name="hora" required>
+              <option value="" disabled selected>Select schedule</option>
+              <option value="09:00">08:00 AM</option>
+              <option value="10:00">09:00 AM</option>
+              <option value="11:00">10:00 AM</option>
+              <option value="14:00">11:00 PM</option>
+              <option value="15:00">02:00 PM</option>
+              <option value="16:00">02:00 PM</option>
+              <option value="17:00">02:00 PM</option>
+              <option value="17:00">03:00 PM</option>
+              <option value="17:00">04:00 PM</option>
+              <option value="17:00">05:00 PM</option>
+              
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-agendar">
+          Schedule an appointment via WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+
+
+  <script>
+    document.getElementById('appointment-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const documento = document.getElementById('documento').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const procedimiento = document.getElementById('procedimiento').value;
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+
+      const mensaje =
+        `Hello Doctor, I would like to schedule an appointment.:\n\n` +
+        `• Nombre: ${nombre}\n` +
+        `• Documento: ${documento}\n` +
+        `• Teléfono: ${telefono}\n` +
+        `• Procedimiento: ${procedimiento}\n` +
+        `• Fecha preferida: ${fecha}\n` +
+        `• Hora aproximada: ${hora}\n\n` +
+        `Thank you very much. I await your confirmation.`;
+
+      const numeroDoctor = "14144182353";  // ← CAMBIA AQUÍ (sin +, sin 0 inicial)
+      const url = `https://wa.me/${numeroDoctor}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <!--==================SECCION FOTTER===============-->
+
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Columna 1: Información principal / Logo o Nombre -->
+        <div class="footer-col">
+          <h3 class="footer-logo">Dr. Sandra Arce</h3>
+          <p class="footer-desc">Aesthetic Medicine and Facial Rejuvenation.</p>
+          <p class="footer-copyright">© 2026 Dr. Sandra Arce. All rights reserved. • Designed by: Alexis Hernandez.</p>
+        </div>
+
+        <!-- Columna 2: Contacto -->
+        <div class="footer-col" id="contacto">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-contact">
+            <li>
+              <span>🗺️</span> Milwaukee.
+            </li>
+            <li>
+              <span>📱</span> +1-414-418-2353
+            </li>
+            <li>
+              <span>✉️</span> sandraarceestetica@gmail.com
+            </li>
+            <li>
+              <span>🕒</span> Monday to Friday: 8:00 a.m. - 6:00 p.m.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Redes Sociales -->
+        <div class="footer-col">
+          <h4 class="footer-title">Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/1H31gRKKzv/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078V12h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12z" />
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com/dr._sandraarce/" target="_blank" aria-label="Instagram" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.228.273 2.661.113 7.019.055 8.3.04 8.707.04 12c0 3.293.014 3.701.072 4.981.16 4.358 2.582 6.791 6.94 6.947 1.28.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.358-.156 6.78-2.589 6.94-6.947.058-1.28.072-1.689.072-4.981 0-3.293-.014-3.701-.072-4.981C23.727 2.661 21.205.228 16.847.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        mobileMenu.classList.remove('hidden');
+        hamburger.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      isOpen = false;
+    }
+
+    // Modal functions (se mantienen por si las usas después)
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      // ... función original sin cambios ...
+    }
+
+    // Smooth scroll para todos los enlaces
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') === '#') return;
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") {
+        const modal = document.getElementById('modal');
+        if (!modal.classList.contains('hidden')) closeModal();
+      }
+    });
+
+    window.onload = () => {
+      // Efecto suave al cargar
+      document.getElementById('hero').style.opacity = '1';
+    };
+  </script>
+</body>
+
+</html>
