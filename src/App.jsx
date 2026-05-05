@@ -84,7 +84,7 @@ function App() {
 
   const bodyTreatments = [
     { img: Semaglutide, title: "Semaglutide", desc: "Achieve your ideal weight safely and sustainably with leading advanced weight loss medical treatment." },
-    { img: SpiderVeins, title: "Sapider Vail Removal", desc: "Regain confidence in your legs: remove spider veins quickly, safely and without surgery." },
+    { img: SpiderVeins, title: "Spider Vail Removal", desc: "Regain confidence in your legs: remove spider veins quickly, safely and without surgery." },
     { img: LaserHair, title: "Laser Hair Removal", desc: "Free yourself from daily hair removal: enjoy soft, hair-free skin permanently and safely." },
     { img: HairRestoration, title: "Hair Restoration", desc: "Regain your hair and your confidence with cutting-edge technology for natural and long-lasting density." },
     { img: Liposuction, title: "Tumescent Liposuction", desc: "Sculpt your figure with maximum precision: remove localized fat deposits safely and with faster recovery." },
@@ -251,7 +251,7 @@ function App() {
               </p>
               <ul className="highlights">
                 <li><strong>Constant updates </strong> on the latest facial and body rejuvenation techniques and technologies.</li>
-                <li>Member of the <strong>Colombian Society of Aesthetic Medicine.</strong></li>
+
                 <li>Certified in leading brands of neuromodulators and fillers.</li>
                 <li>360° Approach: Face, neck, body and overall well-being</li>
               </ul>
@@ -274,7 +274,7 @@ function App() {
       {/* ================= GALLERY ================== */}
       <section id="resultados" className="content-section">
         <div className="container">
-          <h2  className="section-title black">Guaranteed results.</h2>
+          <h2 className="section-title black">Guaranteed results.</h2>
           <p className="gallery-intro">
             Elegance and precision. Discover our best results and experience the best with Dr. Sandra Arce.
           </p>
@@ -292,8 +292,8 @@ function App() {
       <section id="porque-elegirnos" className="porque-section">
         <div className="container">
           <div className="section-header">
-            <span className="pretitle">Razones que nos distinguen</span>
-            <h2>¿Why choose us?</h2>
+            <span className="pretitle">What sets us apart</span>
+            <h2>Why choose us?</h2>
             <p>Absolute commitment to excellence, naturalness and a high-level personalized experience.</p>
           </div>
           <div className="razones-slider">
@@ -320,13 +320,9 @@ function App() {
                 <div className="card">
                   <h3 className="card-title">Missión</h3>
                   <p className="card-text">
-                    My mission as a medical esthetician is to enhance the natural beauty of each person, enhancing their
-                    unique traits and helping them to look and feel better about themselves at every stage of life. I am
-                    committed to offering personalized, safe and minimally invasive treatments, always based on medical
-                    science, professional ethics and active listening to the needs and expectations of my patients. I seek
-                    to achieve harmonious, natural and long-lasting results, promoting not only an aesthetic improvement,
-                    but also comprehensive well-being, confidence and quality of life, preventing premature aging and taking
-                    care of the health of the skin and body.
+                    My mission as a medical esthetician and regenerative medicine specialist is to enhance the natural beauty of each person, celebrating their unique traits and helping them look and feel their best at every stage of life.
+                    I am committed to offering personalized, safe, and minimally invasive treatments — always grounded in medical science, professional ethics, and a deep understanding of each patient's needs and expectations.
+                    Through the integration of regenerative and aesthetic medicine, I seek to achieve harmonious, natural, and long-lasting results that go beyond appearance — promoting comprehensive well-being, confidence, and quality of life, while preventing premature aging and caring for the health of the skin and body from within.
                   </p>
                 </div>
                 <div className="card">
@@ -341,7 +337,7 @@ function App() {
             <div className="doctor-photo">
               <img src={Galeria1} alt="Dr. Sandra Arce" className="doctor-img" />
               <p className="doctor-name">Dr. Sandra Arce.</p>
-              <p className="doctor-title">Specialist in Aesthetic Medicine.</p>
+              <p className="doctor-title">Regenerative Medicine, Aesthetic Medicine and Facial Rejuvenation.</p>
             </div>
           </div>
         </div>
@@ -359,7 +355,7 @@ function App() {
                   <img src={Galeria1} alt="Dr. Sandra Arce" className="profile-photo" />
                 </div>
                 <h3>Dr. Sandra Arce.</h3>
-                <p className="cargo">Specialist in Aesthetic Medicine.</p>
+                <p className="cargo">Regenerative Medicine, Aesthetic Medicine and Facial Rejuvenation.</p>
                 <p className="especialidad">• Responsible for the diagnosis, planning and execution of facial harmonization, rejuvenation and aesthetic medicine treatments.</p>
                 <div className="social-icons">
                   <a href="https://www.facebook.com/share/1H31gRKKzv/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
@@ -447,7 +443,7 @@ function App() {
           <div className="footer-content">
             <div className="footer-col">
               <h3 className="footer-logo">Dr. Sandra Arce</h3>
-              <p className="footer-desc">Aesthetic Medicine and Facial Rejuvenation.</p>
+              <p className="footer-desc">Regenerative Medicine, Aesthetic Medicine and Facial Rejuvenation.</p>
               <p className="footer-copyright">© 2026 Dr. Sandra Arce. All rights reserved. • Designed by: Alexis Hernandez.</p>
             </div>
             <div className="footer-col">
